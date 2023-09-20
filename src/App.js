@@ -13,6 +13,9 @@ function App() {
     <div className='main-container'>
       <div className="App">
         <header className="App-header">
+        <h1>
+          Hello Machine
+        </h1>
           <p />
           <Form>
           </Form>

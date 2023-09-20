@@ -3,30 +3,30 @@ import './Form.css'
 import Button from './Button';
 function Form() {
     const [name, setName] = useState("");
-    const [age, setAge] = useState("");
+    const [album, setAlbum] = useState("");
     const [submittedName, setSubmittedName] = useState(null);
-    const [submittedAge, setSubmittedAge] = useState(null);
+    const [submittedAlbum, setSubmittedAlbum] = useState(null);
     const nameChangeHandler = (i) => {
         setName(i.target.value)
     };
     const ageChangeHandler = (i) => {
-        setAge(i.target.value)
+        setAlbum(i.target.value)
     };
     const handleSubmit = (e) => {
         e.preventDefault();
-        const input = {name, age}
+        const input = {name, age: album}
         console.log(input)
         setSubmittedName(name);
-        setSubmittedAge(age);
+        setSubmittedAlbum(album);
         setName("");
-        setAge("")
+        setAlbum("")
        
     }
     return(
         <>
    <form onSubmit={handleSubmit}>
     <label className='label-box'>
-        Enter name:{' '}   
+        Enter Name:{' '}   
         <input
           className='input-box'
           type='text'
@@ -39,12 +39,12 @@ function Form() {
     
     <br></br>
     <label className='label-box'>
-    Enter age:{" "}
+    Favorite Album:{" "}
     <input
       className='input-box'
-      type='number'
+      type='text'
       required
-      value={age}
+      value={album}
       onChange={ageChangeHandler}
     />
     </label>
@@ -52,9 +52,9 @@ function Form() {
     <button type='submit' className='button-box'>Submit</button>
    </form>
    <div className='result'>
-   {submittedName && submittedAge && (<p>Your name: {submittedName} 
-   <br></br><br></br>
-    Your age: {submittedAge}</p>)} 
+   {submittedName && submittedAlbum && (<p>Hello, {submittedName} , 
+   <br></br>Thank you for your submission <br></br>
+    Favorite Album: {submittedAlbum}</p>)} 
    </div>
    </>
     );

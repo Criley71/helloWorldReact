@@ -9,7 +9,9 @@
     
     /* position:relative for .prevBtn and .nextBtn position:absolute; */
 }
-
+.input-box{
+    margin-top: 13px;
+}
 .button-box{
     background-color: deepskyblue;
     border-color: transparent;
@@ -18,6 +20,7 @@
     font-size: 28px;
     margin-top: 10px;
     transition-duration: .25s;
+    align-items: center;
 }
 .button-box:hover {
     background-color: white;
@@ -35,7 +38,6 @@
 input{
     position: absolute;
     width: 250px;
-    text-transform: capitalize;
     padding-top: 7px;
     font-size: 16px;
     box-sizing: border-box;
@@ -47,11 +49,12 @@ input{
     -webkit-appearance: none;
     -moz-appearance: textfield;
     appearance: none;
+    align-items:center;
 
 }
 input:focus{
     outline: none !important;
-    width: 200%;
+    width: 300px;
     box-shadow: 0 0 10px rgb(142, 193, 207);
     
     
@@ -66,7 +69,8 @@ input:focus{
 }
 .label-box{
     position: relative;
-    right: 60%;
+    right: 55%;
+    text-align: left;
    
 }
 
